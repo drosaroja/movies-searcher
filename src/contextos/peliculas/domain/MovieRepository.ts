@@ -1,6 +1,6 @@
 import { Movie } from "./Movie"
 
 export interface MovieRepository {
-  loadAllMovies(): Movie[];
-  searchMovieByTitle(title:String): Movie[];
+  loadAllMovies(): Movie[];  
+  searchMovieByTitle(movies:Movie[], title:String): Movie[];
 }
