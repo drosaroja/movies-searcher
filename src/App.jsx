@@ -15,8 +15,7 @@ const Movie = ({ title, year }) => {
 
 export const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
-
-  return (
+ return (
     <div className="App">
       <header className="app-header">
         <h1>🎬 Movie Search</h1>

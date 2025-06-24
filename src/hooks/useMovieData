@@ -1,0 +1,13 @@
+import { useEffect, useState } from 'react'
+import { Movie } from '../contextos/peliculas/domain/Movie'
+import { JsonMovieRepository } from '../contextos/peliculas/infrastructure/JsonMovieRepository'
+import { MovieService } from '../contextos/peliculas/services/MovieService';
+
+let jsonMovieRepository = new JsonMovieRepository();
+let movieService = new MovieService(jsonMovieRepository);
+
+function sortMovie(
+  movies: Movie[], title:string
+): Movie[] {
+  return movieService.searchMoviesByTilulo(movies,title);
+}
